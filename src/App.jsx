@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import { GoStar } from "react-icons/go";
 import resume from "./assets/CHANDRA_VAMSI_RESUME.pdf";
 
 const EXPERIENCES = [
@@ -108,7 +107,19 @@ export default function App() {
       <div
         className="pointer-events-none absolute inset-0 z-30 transition duration-300"
         style={{
-          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+          background: `radial-gradient(350px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+        }}
+      ></div>
+
+      {/* Dotted pattern background */}
+      <div
+        className="pointer-events-none absolute inset-0 z-20"
+        style={{
+          backgroundPosition: "0 0",
+          backgroundSize: "35px 35px",
+          backgroundImage: "radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 2px)",
+          maskImage: `radial-gradient(350px at ${mousePosition.x}px ${mousePosition.y}px, black, transparent 80%)`,
+          WebkitMaskImage: `radial-gradient(350px at ${mousePosition.x}px ${mousePosition.y}px, black, transparent 80%)`,
         }}
       ></div>
 
