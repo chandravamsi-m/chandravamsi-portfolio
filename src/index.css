@@ -5,6 +5,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  background-color: #0f172a;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -15,14 +21,20 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a; 
+  background: transparent; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155; 
+  background: transparent;
   border-radius: 4px;
 }
 
+/* Show scrollbar while scrolling */
+.is-scrolling ::-webkit-scrollbar-thumb {
+  background-color: #334155;
+}
+
+/* Show scrollbar when specifically hovered */
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569; 
+  background-color: #475569 !important;
 }
