@@ -9,7 +9,6 @@ const EXPERIENCES = [
     date: "Feb 2025 — Present",
     title: "Software Developer",
     company: "Quantum Works Private Limited",
-    url: "https://quantumworks.in/",
     description:
       "Contributing to the development of production web applications across company and client projects. Focused on backend development with Java and Spring Boot, building reliable APIs and working with relational and NoSQL databases. Collaborate closely with frontend engineers and cross-functional teams to deliver clean, maintainable features.",
     technologies: [
@@ -31,10 +30,8 @@ const EXPERIENCES = [
 const PROJECTS = [
   {
     title: "E-commerce Platform (Retail Products Website)",
-    // url: "https://www.newline.co/courses/build-a-spotify-connected-app",
     description:
       "A full-stack e-commerce web application built to support product browsing, secure checkout, and order management. The platform includes both customer-facing flows and an admin interface for managing orders and inventory. The application focuses on clean user experience, secure authentication, and reliable payment processing, with attention to responsive design and maintainable backend architecture.",
-    image: "https://halcyon-theme.netlify.app/static/demo.png", // Placeholder
     technologies: [
       "React",
       "Tailwind CSS",
@@ -43,20 +40,15 @@ const PROJECTS = [
       "Firebase",
       "Razorpay",
     ],
-    stats: "",
   },
   {
     title: "Medical Survey Web Application",
-    // url: "https://spotify-profile.herokuapp.com/",
     description:
       "A backend-focused web application built to manage medical survey data, including patient registration, survey submission, and structured data retrieval. The system emphasizes data integrity, validation, and clean API design. Designed to support flexible data models and smooth frontend integration, this project highlights backend reliability and clear separation of concerns.",
     technologies: ["Java", "Spring Boot", "MongoDB", "REST APIs", "Postman"],
-    stats: "",
-    image: "https://halcyon-theme.netlify.app/static/demo.png", // Placeholder
   },
   {
     title: "Learning Management System (LMS)",
-    // url: "https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode",
     description:
       "A backend-driven Learning Management System built to support Admin, Instructor, and Student roles. The platform enables course creation, student enrollment, and controlled access to learning content through well-structured backend APIs. The system places strong emphasis on security and reliability, implementing JWT-based role management, OAuth2 login, and email OTP–based authentication, along with a normalized relational data model to ensure scalability and maintainability.",
     technologies: [
@@ -71,18 +63,7 @@ const PROJECTS = [
       "REST APIs",
       "Postman",
     ],
-    stats: "",
-    image: "https://halcyon-theme.netlify.app/static/demo.png", // Placeholder
   },
-  // {
-  //   title: "brittanychiang.com (v4)",
-  //   url: "https://v4.brittanychiang.com/",
-  //   description:
-  //     "An old portfolio site built with Gatsby with 6k+ stars and 3k+ forks",
-  //   technologies: ["Gatsby", "Styled Components", "Netlify"],
-  //   stats: "8,160",
-  //   image: "https://halcyon-theme.netlify.app/static/demo.png", // Placeholder
-  // },
 ];
 
 export default function App() {
@@ -131,7 +112,7 @@ export default function App() {
         }}
       ></div>
 
-      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-8 font-sans md:px-12 md:py-16 lg:px-12 lg:py-0">
+      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-4 font-sans md:px-12 md:py-16 lg:px-12 lg:py-0">
         <div className="lg:flex lg:justify-between lg:gap-24">
           {/* Left Column: Header / Nav */}
           <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-28">
@@ -256,7 +237,7 @@ export default function App() {
           <main id="content" className="pt-12 lg:w-1/2 lg:pb-24 lg:pt-0">
             <section
               id="about"
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 lg:min-h-screen lg:pb-24 lg:pt-[7.5rem]"
+              className="mb-8 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 lg:min-h-screen lg:pb-24 lg:pt-[7.5rem]"
               aria-label="About me"
             >
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
@@ -290,7 +271,7 @@ export default function App() {
 
             <section
               id="experience"
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 lg:pt-[1.5rem]"
+              className="mb-8 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 lg:pt-[1.5rem]"
               aria-label="Work experience"
             >
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
@@ -300,37 +281,22 @@ export default function App() {
               </div>
               <ol className="group/list">
                 {EXPERIENCES.map((exp, index) => (
-                  <li key={index} className="mb-12">
-                    <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                  <li key={index} className="mb-12 md:mb-20">
+                    <div className="group relative grid pb-1 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                      <header
-                        className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
-                        aria-label={exp.date}
-                      >
-                        {exp.date}
-                      </header>
-                      <div className="z-10 sm:col-span-6">
-                        <h3 className="font-medium leading-snug text-slate-200">
-                          <div>
-                            <a
-                              className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                              href={exp.url}
-                              target="_blank"
-                              rel="noreferrer"
-                              aria-label={`${exp.title} at ${exp.company}`}
-                            >
-                              <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                              <span>
-                                {exp.title} -{" "}
-                                <span className="inline-block">
-                                  {exp.company}
-                                  <FiArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1" />
-                                </span>
-                              </span>
-                            </a>
+                      <div className="z-10">
+                        <header
+                          className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500"
+                          aria-label={exp.date}
+                        >
+                          {exp.date}
+                        </header>
+                        <h3 className="mb-3 font-medium leading-snug text-slate-200">
+                          <div className="text-lg font-bold leading-tight text-slate-200">
+                            {exp.title} - <span className="text-teal-300">{exp.company}</span>
                           </div>
                         </h3>
-                        <p className="mt-2 text-sm leading-normal">
+                        <p className="text-sm leading-loose text-slate-400">
                           {exp.description}
                         </p>
                         {exp.links && (
@@ -383,7 +349,7 @@ export default function App() {
                 <a
                   className="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
                   aria-label="View Full Resume"
-                  href={resume}
+                  href={resume} target="_blank"
                 >
                   <span>
                     <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">
@@ -399,7 +365,7 @@ export default function App() {
 
             <section
               id="projects"
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 lg:pt-[1.5rem]"
+              className="mb-8 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 lg:pt-[1.5rem]"
               aria-label="Selected projects"
             >
               <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
@@ -409,39 +375,18 @@ export default function App() {
               </div>
               <ul className="group/list">
                 {PROJECTS.map((project, index) => (
-                  <li key={index} className="mb-12">
-                    <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                  <li key={index} className="mb-10 md:mb-12">
+                    <div className="group relative grid gap-4 pb-1 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                      <div className="z-10 sm:order-2 sm:col-span-6">
+                      <div className="z-10">
                         <h3>
-                          <a
-                            className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                            href={project.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label={project.title}
-                          >
-                            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                            <span>
-                              {project.title}{" "}
-                              <span className="inline-block">
-                                <FiArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 motion-reduce:transition-none ml-1" />
-                              </span>
-                            </span>
-                          </a>
+                          <div className="text-base font-medium leading-tight text-slate-200">
+                            {project.title}
+                          </div>
                         </h3>
                         <p className="mt-2 text-sm leading-normal">
                           {project.description}
                         </p>
-                        {project.stats && (
-                          <div
-                            className="mt-2 text-xs text-slate-500"
-                            aria-label="Star rating"
-                          >
-                            <GoStar className="mr-1 inline-block h-3 w-3" />
-                            {project.stats}
-                          </div>
-                        )}
                         <ul
                           className="mt-2 flex flex-wrap"
                           aria-label="Technologies used"
@@ -455,22 +400,11 @@ export default function App() {
                           ))}
                         </ul>
                       </div>
-                      <img
-                        alt=""
-                        loading="lazy"
-                        width="200"
-                        height="48"
-                        decoding="async"
-                        data-nimg="1"
-                        className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                        style={{ color: "transparent" }}
-                        src="https://placehold.co/200x120/1e293b/475569?text=Project"
-                      />
                     </div>
                   </li>
                 ))}
               </ul>
-              <div className="mt-12">
+              {/* <div className="mt-12">
                 <a
                   className="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
                   aria-label="View Full Project Archive"
@@ -485,10 +419,10 @@ export default function App() {
                     </span>
                   </span>
                 </a>
-              </div>
+              </div> */}
             </section>
 
-            <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+            <footer className="max-w-md pb-8 text-sm text-slate-500 sm:pb-0">
               <p>
                 Built with curiosity, coffee, and a lot of console.logs,
                 embracing the process of learning, breaking, and improving.
