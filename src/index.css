@@ -9,32 +9,73 @@ html, body {
   background-color: #0f172a;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Custom scrollbar for Webkit browsers */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent; 
-}
-
-::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0px;
   background: transparent;
-  border-radius: 4px;
 }
 
-/* Show scrollbar while scrolling */
-.is-scrolling ::-webkit-scrollbar-thumb {
-  background-color: #334155;
+.custom-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Show scrollbar when specifically hovered */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #475569 !important;
+/* Glassmorphism utility */
+.glass {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Experience Card Beam Effect (Tracing Comet) */
+@keyframes beam-svg {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1; }
+}
+
+.beam-container {
+  position: absolute;
+  inset: -1.5px;
+  border-radius: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 5;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.group:hover .beam-container {
+  opacity: 1;
+}
+
+.beam-svg-rect {
+  stroke-dasharray: 0.02 0.98; /* Shorter beam (3%) */
+  stroke-linecap: round;
+  will-change: stroke-dashoffset; /* Optimization hint */
+  animation: beam-svg 7s linear infinite;
+}
+
+
+
+@media (min-width: 1024px) {
+  .sidebar-solid-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 100vw;
+    background: inherit;
+    z-index: -1;
+  }
 }

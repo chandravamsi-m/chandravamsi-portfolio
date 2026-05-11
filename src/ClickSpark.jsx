@@ -99,7 +99,7 @@ const ClickSpark = ({
     <div
       ref={containerRef}
       onPointerDown={handlePointerDown}
-      className="relative w-full h-full"
+      className="relative w-full"
     >
       <canvas
         ref={canvasRef}
